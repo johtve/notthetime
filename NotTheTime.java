@@ -29,10 +29,10 @@ class NotTheTime {
 
     private void fillNotTimes() {
 
-        for (int h = 1; h < 24; h++) {
+        for (int h = 0; h < 24; h++) {
 
             // Skip iteration if minute = current
-            for (int m = 1; m < 60; m++) {
+            for (int m = 0; m < 60; m++) {
                 if (m == currentMin) {
                     continue;
                 }
