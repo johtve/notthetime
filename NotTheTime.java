@@ -13,15 +13,6 @@ class NotTheTime {
         fillNotTimes();
     }
 
-    public NotTheTime(Boolean shuffle) {
-
-        this();
-
-        if (shuffle) {
-            Collections.shuffle(notTimes);
-        }
-    }
-
     private void getCurrentMinute() {
         currentMin = rightNow.get(Calendar.MINUTE);
 
@@ -39,6 +30,10 @@ class NotTheTime {
                 notTimes.add(h + ":" + m);
             }
         }
+    }
+
+    public void shuffleNotTimes() {
+        Collections.shuffle(notTimes);
     }
 
     public void print() {
@@ -59,6 +54,10 @@ class NotTheTime {
     public static void main(String[] args) {
 
         NotTheTime notTheTime = new NotTheTime();
+
+        if (0 < args.length && args[0].equals("shuffle")) {
+            notTheTime.shuffleNotTimes();
+        }
         notTheTime.print();
 
     }

@@ -12,4 +12,4 @@ Java program which tells you what the time definitely isn't
 
 ## Bonus
 
-By setting the constructor param "shuffle" to true, you can get the times it's not in absolutely no order whatsoever.
+By setting the CLI arg "shuffle", you can get the times it's not in absolutely no order whatsoever.
